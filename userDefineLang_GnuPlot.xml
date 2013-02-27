@@ -1,10 +1,13 @@
-<!--
+﻿<!--
 Source
 http://notepad-plus.sourceforge.net/commun/userDefinedLang/userDefineLang_Gnuplot.xml
 by Johan Wild (johan.wild@europaskolan.se)
+
+Additions by Tim Hoffmann and Karl Heinz Schlögelmann
+via comp.graphics.apps.gnuplot
 -->
 <NotepadPlus>
-    <UserLang name="GnuPlot" ext=".plt" udlVersion="2.1">
+    <UserLang name="GnuPlot" ext=".plt .gp .gnuplot" udlVersion="2.1">
         <Settings>
             <Global caseIgnored="no" allowFoldOfComments="no" foldCompact="no" forcePureLC="0" decimalSeparator="0" />
             <Prefix Keywords1="no" Keywords2="no" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
@@ -18,7 +21,8 @@ by Johan Wild (johan.wild@europaskolan.se)
             <Keywords name="Numbers, suffix1"></Keywords>
             <Keywords name="Numbers, suffix2"></Keywords>
             <Keywords name="Numbers, range"></Keywords>
-            <Keywords name="Operators1">&quot; ( ) * [ ] +</Keywords>
+            <Keywords name="Operators1">&quot; ( ) * [ ] - ! $ % &amp; * , . / : ? \ ^ |
+~ + &lt; = &gt;</Keywords>
             <Keywords name="Operators2"></Keywords>
             <Keywords name="Folders in code1, open"></Keywords>
             <Keywords name="Folders in code1, middle"></Keywords>
@@ -29,15 +33,20 @@ by Johan Wild (johan.wild@europaskolan.se)
             <Keywords name="Folders in comment, open"></Keywords>
             <Keywords name="Folders in comment, middle"></Keywords>
             <Keywords name="Folders in comment, close"></Keywords>
-            <Keywords name="Keywords1">set cd call clear exit fit help history if load lower pause plot print pwd quit raise replot reread reset save set-show shell splot system test unset update</Keywords>
-            <Keywords name="Keywords2">lt lw angles arrow autoscale bars bmargin border boxwidth clabel clip cntrparam color box contour data style datafile decimalsign dgrid3d dummy encoding fit fontpath format function style functions grid hidden3d historysize isosamples key label lmargin loadpath locale logscale macros mapping margin mouse multiplot mx2tics mxtics my2tics mytics mztics offsets origin output parametric plot pm3d palette pointsize polar print object rmargin rrange samples size style surface table terminal termoption tics ticslevel ticscale timestamp timefmt title tmargin trange urange variables version view vrange x2data x2dtics x2label x2mtics x2range x2tics x2zeroaxis xdata xdtics xlabel xmtics xrange xtics xyplane xzeroaxis y2data y2dtics y2label y2mtics y2range y2tics y2zeroaxis ydata ydtics ylabel ymtics yrange ytics yzeroaxis zdata zdtics zzeroaxis cbdata cbdtics zero zeroaxis zlabel zmtics zrange ztics cblabel cbmtics cbrange cbtics</Keywords>
-            <Keywords name="Keywords3">abs acos acosh arg asin asinh atan atan2 atanh besj0 besj1 besy0 besy1 ceil cos cosh erf erfc exp floor gamma ibeta inverf igamma imag invnorm int lambertw lgamma log log10 norm rand real sgn sin sinh sqrt tan tanh gprintf sprintf strlen strstrt substr system word words column defined exists stringcolumn timecolumn tm_hour tm_mday tm_min tm_mon tm_sec tm_wday tm_yday tm_year valid</Keywords>
-            <Keywords name="Keywords4">iso_8859_1 windows</Keywords>
-            <Keywords name="Keywords5"></Keywords>
+            <!-- COMMANDS -->
+            <Keywords name="Keywords1">set cd call clear "do for" else every exit fit help history if index load lower pause plot print pwd quit raise refresh replot reread reset save screendump set-show shell show smooth splot system test thru unset u update using via with w</Keywords>
+            <!-- BUILT-IN-VARIABLES -->
+            <Keywords name="Keywords2">acssplines angles arrow autoscale bars bezier binary bmargin border box boxwidth cbdata cbdtics cblabel cbmtics cbrange cbtics clabel clip cntrparam color contour csplines data datafile decimalsign dgrid3d dummy encoding fontpath format frquency function functions grid hidden3d historysize isosamples key label lmargin loadpath locale logscale lt lw macros mapping margin matrix mouse multiplot mx2tics mxtics my2tics mytics mztics notitle object offsets origin output palette parametric pm3d pointsize polar print rmargin rrange samples sbeszier size style style style surface table terminal termoption termoption tics ticscale ticslevel timefmt timestamp title tmargin trange unique urange variables version view vrange x2data x2dtics x2label x2mtics x2range x2tics x2zeroaxis xdata xdtics xlabel xmtics xrange xtics xyplane xzeroaxis y2data y2dtics y2label y2mtics y2range y2tics y2zeroaxis ydata ydtics ylabel ymtics yrange ytics yzeroaxis zdata zdtics zero zeroaxis zlabel zmtics zrange ztics zzeroaxis</Keywords>
+            <!-- FUNCTIONS -->
+            <Keywords name="Keywords3">abs acos acosh arg asin asinh atan atan2 atanh besj0 besj1 besy0 besy1 ceil column cos cosh defined erf erfc exists exp floor gamma gprintf ibeta igamma imag int inverf invnorm lambertw lgamma log log10 norm rand real sgn sin sinh sprintf sqrt stringcolumn strlen strstrt substr system tan tanh timecolumn tm_hour tm_mday tm_min tm_mon tm_sec tm_wday tm_yday tm_year valid word words</Keywords>
+            <!-- CONSTANTS -->
+            <Keywords name="Keywords4">pi FIT_CONVERGED FIT_LAMBDA_FACTOR FIT_LIMIT FIT_LOG FIT_MAXITER FIT_NDF FIT_SCRIPT FIT_START_LAMBDA FIT_STDFIT FIT_WSSR GNUTERM MOUSE_ALT MOUSE_BUTTON MOUSE_CHAR MOUSE_CTRL MOUSE_KEY MOUSE_SHIFT MOUSE_X MOUSE_X2 MOUSE_Y MOUSE_Y2 GPVAL_CB_LOG GPVAL_CB_MAX GPVAL_CB_MIN GPVAL_CB_REVERSE GPVAL_COMPILE_OPTIONS GPVAL_LAST_PLOT GPVAL_MULTIPLOT GPVAL_OUTPUT GPVAL_PATCHLEVEL GPVAL_PLOT GPVAL_SPLOT GPVAL_TERM GPVAL_TERMOPTIONS GPVAL_T_LOG GPVAL_T_MAX GPVAL_T_MIN GPVAL_T_REVERSE GPVAL_U_LOG GPVAL_U_MAX GPVAL_U_MIN GPVAL_U_REVERSE GPVAL_VERSION GPVAL_VIEW_MAP GPVAL_VIEW_ROT_X GPVAL_VIEW_ROT_Z GPVAL_VIEW_SCALE GPVAL_VIEW_ZSCALE GPVAL_V_LOG GPVAL_V_MAX GPVAL_V_MIN GPVAL_V_REVERSE GPVAL_X2_LOG GPVAL_X2_MAX GPVAL_X2_MIN GPVAL_X2_REVERSE GPVAL_X_LOG GPVAL_X_MAX GPVAL_X_MIN GPVAL_X_REVERSE GPVAL_Y2_LOG GPVAL_Y2_MAX GPVAL_Y2_MIN GPVAL_Y2_REVERSE GPVAL_Y_LOG GPVAL_Y_MAX GPVAL_Y_MIN GPVAL_Y_REVERSE GPVAL_Z_LOG GPVAL_Z_MAX GPVAL_Z_MIN GPVAL_Z_REVERSE GPVAL_TERMINALS</Keywords>
+            <!-- CHARACTER-SET -->
+            <Keywords name="Keywords5">iso_8859_1 windows</Keywords>
             <Keywords name="Keywords6"></Keywords>
             <Keywords name="Keywords7"></Keywords>
             <Keywords name="Keywords8"></Keywords>
-            <Keywords name="Delimiters">00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23</Keywords>
+            <Keywords name="Delimiters">00&apos; 00&quot; 01 02&apos; 02&quot; 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23</Keywords>
         </KeywordLists>
         <Styles>
             <WordsStyle name="DEFAULT" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
@@ -47,8 +56,8 @@ by Johan Wild (johan.wild@europaskolan.se)
             <WordsStyle name="KEYWORDS1" fgColor="0080FF" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS2" fgColor="FF8000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS3" fgColor="FF00FF" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS4" fgColor="800040" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS5" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS4" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS5" fgColor="800040" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS6" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS7" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS8" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
